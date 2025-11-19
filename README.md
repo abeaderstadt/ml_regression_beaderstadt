@@ -4,26 +4,10 @@
 ## Project Overview
 In this project, I explore TODO
 
-[Click here for my notebook file](https://github.com/abeaderstadt/ml_classification_beaderstadt/blob/main/classification_beaderstadt.ipynb)<br>
-[Click here for my peer review file](https://github.com/abeaderstadt/ml_classification_beaderstadt/blob/main/peer_review.md)<br>
+[Click here for my notebook file](https://github.com/abeaderstadt/ml_regression_beaderstadt/blob/main/regression_beaderstadt.ipynb)<br>
+[Click here for my peer review file](https://github.com/abeaderstadt/ml_regression_beaderstadt/blob/main/peer_review.md)<br>
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ##  Machine & Project Setup Instructions
