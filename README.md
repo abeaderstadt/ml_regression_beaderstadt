@@ -1,3 +1,31 @@
+# Beaderstadt Final Project: Regression Analysis
+> My personalized Submission: GitHub Repository with Jupyter Notebook and Peer Review.
+
+## Project Overview
+In this project, I explore TODO
+
+[Click here for my notebook file](https://github.com/abeaderstadt/ml_classification_beaderstadt/blob/main/classification_beaderstadt.ipynb)<br>
+[Click here for my peer review file](https://github.com/abeaderstadt/ml_classification_beaderstadt/blob/main/peer_review.md)<br>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##  Machine & Project Setup Instructions
 
 The steps below outline how I set up my machine and this Python project for reproducibility.
