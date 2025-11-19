@@ -1,4 +1,4 @@
-## 🛠 Machine & Project Setup Instructions
+##  Machine & Project Setup Instructions
 
 The steps below outline how I set up my machine and this Python project for reproducibility.
 
@@ -54,7 +54,7 @@ The steps below outline how I set up my machine and this Python project for repr
 1. Create a `pyproject.toml` file.  
 2. Create a `src` folder with a `.gitkeep` file inside.  
 
-**In the VS Code terminal, run:**
+**In the VS Code terminal, run the following commands:**
 
 ```powershell
 uv venv
@@ -64,26 +64,41 @@ uv run pre-commit install
 uv run python --version
 
 **Activate environment:**
-`.\.venv\Scripts\activate`
+.\.venv\Scripts\activate
 
 Notes:
 - .venv contains your project-specific Python environment.
 - Python 3.12 is recommended.
 - Pre-commit can be uninstalled if not needed.
+```
 
-### Step 2.6: Git Add - Commit - Push
+---
+
+### 2.6 Git Add - Commit - Push
 1. Open a terminal in VS Code.
 2. Stage all changes:
-git add .
+   ```powershell 
+   git add .
+   ```
 3. Commit with a descriptive message:
-git commit -m "Initialize from pro-analytics-02-starter (no local edits)"
+   ```powershell 
+   git commit -m "Initialize from pro-analytics-02-starter (no local edits)"
+   ```
 4. Uninstall pre-commit if not needed:
-pre-commit uninstall
+   ```powershell
+   pre-commit uninstall
+   ```
 5. Push to GitHub: This triggers GitHub Actions and publishes documentation via GitHub Pages.
-git push -u origin main
+   ``` powershell
+   git push -u origin main
+   ```
+
+--- 
 
 ### Step 2.7: Later Commits
 For subsequent changes: Always use descriptive commit messages.
+```powershell
 git add .
 git commit -m "Personalize pyproject authors and mkdocs site settings"
 git push
+```
