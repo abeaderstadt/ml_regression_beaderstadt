@@ -1,67 +1,89 @@
-Step 2.1. Copy This Repository on GitHub
-Log in to GitHub in your browser.
-Go to https://github.com/denisecase/applied-ml-template/.
-Click the green Use this template button → choose Create a new repository.
-Name your repository
-Use all lowercase and dashes between words.
-Example: applied-ml-yourname.
-Set visibility to Public.
-Click Create repository.
-Step 2.2 Enable GitHub Pages (Recommended)
-Before leaving GitHub, set up your repository to host your code documentation automatically.
+## 🛠 Machine & Project Setup Instructions
 
-In your new repository, click the Settings tab (top right).
-In the left sidebar, select Pages.
-Under Source, choose GitHub Actions.
-Click the Code tab to return to the regular view.
-GitHub will automatically build and publish your documentation when you push changes.
+The steps below outline how I set up my machine and this Python project for reproducibility.
 
-Step 2.3. Clone Your Repo to Your Computer and Open In VS Code
-Open VS Code
-Press Ctrl+Shift+P (Mac: Cmd+Shift+P)
-Type "clone" and select "Git: Clone"
-Paste your repository URL from GitHub
-When asked where to save, navigate to your Repos folder:
-Windows: C:\Repos
-Mac/Linux: ~/Repos (in your home folder)
-Click "Select Repository Location"
-When VS Code asks "Open Repository?" - click "Open"
-Alternative: Clone using terminal
-Step 2.4. Install Recommended VS Code Extensions
-When you first open this project, VS Code will prompt you to install recommended extensions. Click "Install All" to get Python support, Jupyter notebooks, linting, formatting, and Git integration. See .vscode/extensions.json for the complete list.
+---
 
-Step 2.5. Set Up Virtual Environment (.venv)
-Using your VS Code terminal, run the following commands to:
+### Step 2.1: Create Repository on GitHub
+1. Log in to GitHub in your browser.  
+2. Create a new repository.  
+3. Name your repository using all lowercase letters and dashes.  
+   - Example: `applied-ml-yourname`  
+4. Set visibility to **Public**.  
+5. Click **Create repository**.
 
-Create a local virtual environment using uv venv.
-Pin a Python version. Version 3.12 is recommended for speed, stability, and current compatibility.
-Install optional tools (for dev and docs) and update packages.
-Install pre-commit so checks run automatically on each commit.
-Verify the python version installed is 3.12 (not 3.13 or 3.14).
-Finally, activate your environment (operating system specific).
+---
+
+### Step 2.2: Enable GitHub Pages (Recommended)
+1. In your new repository, click the **Settings** tab.  
+2. In the left sidebar, select **Pages**.  
+3. Under **Source**, choose **GitHub Actions**.  
+4. Click the **Code** tab to return.  
+
+> GitHub will automatically build and publish documentation when you push changes.
+
+---
+
+### Step 2.3: Clone Your Repo and Open in VS Code
+1. Open VS Code.  
+2. Press `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).  
+3. Type `"clone"` and select **Git: Clone**.  
+4. Paste your repository URL from GitHub.  
+5. When asked where to save, navigate to your `Repos` folder:  
+   - Windows: `C:\Repos`  
+   - Mac/Linux: `~/Repos`  
+6. Click **Select Repository Location**.  
+7. When prompted **"Open Repository?"**, click **Open**.  
+
+**Alternative:** Clone using the terminal.
+
+---
+
+### Step 2.4: Install Recommended VS Code Extensions
+- VS Code will prompt you to install recommended extensions on first open.  
+- Click **Install All** to get:  
+  - Python support  
+  - Jupyter notebooks  
+  - Linting & formatting  
+  - Git integration  
+- See `.vscode/extensions.json` for full list.
+
+---
+
+### Step 2.5: Set Up Virtual Environment (.venv)
+1. Create a `pyproject.toml` file.  
+2. Create a `src` folder with a `.gitkeep` file inside.  
+
+**In the VS Code terminal, run:**
+
+```powershell
 uv venv
 uv python pin 3.12
 uv sync --extra dev --extra docs --upgrade
 uv run pre-commit install
 uv run python --version
-Windows (PowerShell):
 
-.\.venv\Scripts\activate
-Step 2.6. Git add-commit-push
-Open a terminal in VS Code (PowerShell, zsh, or bash).
+**Activate environment:**
+`.\.venv\Scripts\activate`
 
-IMPORTANT: Replace the commit message with a clear and descriptive note about what you added or changed. Wrap the commit message in double quotes.
+Notes:
+- .venv contains your project-specific Python environment.
+- Python 3.12 is recommended.
+- Pre-commit can be uninstalled if not needed.
 
+### Step 2.6: Git Add - Commit - Push
+1. Open a terminal in VS Code.
+2. Stage all changes:
 git add .
+3. Commit with a descriptive message:
 git commit -m "Initialize from pro-analytics-02-starter (no local edits)"
+4. Uninstall pre-commit if not needed:
+pre-commit uninstall
+5. Push to GitHub: This triggers GitHub Actions and publishes documentation via GitHub Pages.
 git push -u origin main
-We can then use git push for later commits.
 
-NOTE: This will trigger the GitHub Actions workflow and publish your documentation via GitHub Pages. This should verify things worked as provided. If anything fails, let us know in the associated discussion.
-
-Step 2.8. Git add-commit-push
-Open a terminal in VS Code (PowerShell, zsh, or bash).
-
+### Step 2.7: Later Commits
+For subsequent changes: Always use descriptive commit messages.
 git add .
 git commit -m "Personalize pyproject authors and mkdocs site settings"
 git push
