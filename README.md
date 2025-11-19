@@ -9,6 +9,117 @@ In this project, I explore TODO
 
 ---
 
+## Key Steps in This Project
+
+## 1. Import and Inspect the Data
+- Loaded the Medical Costs Dataset from Kaggle.
+- Inspected the dataset using `.info()`, `.head()`, `.describe()`, and `.isnull().sum()`.
+- Check for missing values and display summary statistics.
+
+  - **Insights:**
+    - TODO instances and ? features.
+    - The target variable is TODO
+
+---
+
+## 2. Data Exploration and Preparation
+
+### 2.1 Explore data patterns and distributions
+- TODO
+
+### 2.2 Handle missing values and clean data
+- TODO 
+
+### 2.3 Feature selection and engineering
+- TODO
+
+  - **Rationale:**
+    - TODO
+
+---
+
+## 3. Feature Selection and Target Definition
+
+### 3.1 Choose features and target
+- TODO
+
+**Reasoning:**  
+- These features were selected because TODO
+
+### 3.2 Define X and y
+- Assign input features to X
+- Assign target variable to y
+---
+
+## 4. Train a Model (Linear Regression)
+
+### 4.1 Train and Split the data
+- Split the data into training and test sets using train_test_split.
+- Preserved the class balance for reliable evaluation.
+
+### 4.2 Train model using Scikit-Learn model.fit() method
+  
+### 4.3 Evalulate performance for example:
+- Regression: R^2, MAE, RMSE (RMSE has been recently updated)
+- Clustering: Inertia, Silhouette Score
+- Key metrics: TODO
+
+---
+
+## Section 5. Improve the Model or Try Alternates (Implement Pipelines)
+
+### 5.1 Implement Pipeline 1: Imputer → StandardScaler → Linear Regression.
+- TODO
+
+### 5.2 Implement Pipeline 2: Imputer → Polynomial Features (degree=3) → StandardScaler → Linear Regression.
+- TODO
+  
+### 5.3 Compare performance of all models across the same performance metrics
+- TODO
+
+**Reasoning:**  
+- TODO  Which models performed better? How does scaling impact results?
+---
+
+## 6. Final Thoughts & Insights
+
+### 6.1 Summarize findings.
+
+TODO ADD KEY CHART 
+
+***Top features and model performance***
+- TODO INSTERT TABLE HERE AND NOTE
+
+
+- TODO LIST KEY FINDINGS & CONCLUSIONS HERE
+
+### 6.2 Discuss challenges faced.
+- TODO
+
+### 6.3 Future work
+- TODO 
+
+---
+
+## How to Run
+
+1. **Open the Project Notebook**  
+   Navigate to and open the Jupyter notebook:  
+   `regression_beaderstadt.ipynb`
+
+2. **Select the Correct Kernel**  
+   Ensure the notebook uses the correct Python environment where required libraries are installed.
+
+3. **Clear Kernel / Outputs (Optional)**  
+   Use Kernel -> Restart & Clear Outputs to start fresh and avoid stale variables or plots.
+
+4. **Run the Notebook**  
+   Execute cells sequentially to load data, prepare features, train models, and visualize results.
+
+5. **View Results**  
+   TODO
+
+---
 
 ##  Machine & Project Setup Instructions
 
