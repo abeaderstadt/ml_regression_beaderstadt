@@ -26,16 +26,10 @@ The steps below outline how I set up my machine and this Python project for repr
 
 ### Step 3: Clone Your Repo and Open in VS Code
 1. Open VS Code.  
-2. Press `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).  
-3. Type `"clone"` and select **Git: Clone**.  
-4. Paste your repository URL from GitHub.  
-5. When asked where to save, navigate to your `Repos` folder:  
-   - Windows: `C:\Repos`  
-   - Mac/Linux: `~/Repos`  
-6. Click **Select Repository Location**.  
-7. When prompted **"Open Repository?"**, click **Open**.  
-
-**Alternative:** Clone using the terminal.
+2. Navigate to the folder where you would like to clone your repo.  
+3. Open a new terminal and type `"git clone https://github.com/abeaderstadt/ml_regression_beaderstadt.git"`.  
+4. You should see the repo folder in the explorer.
+5. Select file - open folder - and select the newly cloned repo to begin working in it.
 
 ---
 
