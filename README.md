@@ -12,7 +12,7 @@ In this project, I explore TODO
 ## Key Steps in This Project
 
 ## 1. Import and Inspect the Data
-- Loaded the Medical Costs Dataset from Kaggle.
+- Loaded the [Medical Costs Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance) from Kaggle.
 - Inspected the dataset using `.info()`, `.head()`, `.describe()`, and `.isnull().sum()`.
 - Check for missing values and display summary statistics.
 
