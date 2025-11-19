@@ -1,135 +1,67 @@
-# ml_regression_beaderstadt
-# 1. Set Up Machine (Once per machine)
+Step 2.1. Copy This Repository on GitHub
+Log in to GitHub in your browser.
+Go to https://github.com/denisecase/applied-ml-template/.
+Click the green Use this template button → choose Create a new repository.
+Name your repository
+Use all lowercase and dashes between words.
+Example: applied-ml-yourname.
+Set visibility to Public.
+Click Create repository.
+Step 2.2 Enable GitHub Pages (Recommended)
+Before leaving GitHub, set up your repository to host your code documentation automatically.
 
-> Keep track of how long this takes, and if you encounter any issues and how you resolve them.
-> Estimated time: about an hour
+In your new repository, click the Settings tab (top right).
+In the left sidebar, select Pages.
+Under Source, choose GitHub Actions.
+Click the Code tab to return to the regular view.
+GitHub will automatically build and publish your documentation when you push changes.
 
-## Step 1.1. (10 min) Create a free GitHub account at <https://github.com>.
+Step 2.3. Clone Your Repo to Your Computer and Open In VS Code
+Open VS Code
+Press Ctrl+Shift+P (Mac: Cmd+Shift+P)
+Type "clone" and select "Git: Clone"
+Paste your repository URL from GitHub
+When asked where to save, navigate to your Repos folder:
+Windows: C:\Repos
+Mac/Linux: ~/Repos (in your home folder)
+Click "Select Repository Location"
+When VS Code asks "Open Repository?" - click "Open"
+Alternative: Clone using terminal
+Step 2.4. Install Recommended VS Code Extensions
+When you first open this project, VS Code will prompt you to install recommended extensions. Click "Install All" to get Python support, Jupyter notebooks, linting, formatting, and Git integration. See .vscode/extensions.json for the complete list.
 
-Student emails get benefits, but you may lose access after graduation.
-A permanent email will be yours forever. You can add a second email to your account.
+Step 2.5. Set Up Virtual Environment (.venv)
+Using your VS Code terminal, run the following commands to:
 
-## Step 1.2. (5 min) Set your Machine to Show File Extensions and Show Hidden Files
+Create a local virtual environment using uv venv.
+Pin a Python version. Version 3.12 is recommended for speed, stability, and current compatibility.
+Install optional tools (for dev and docs) and update packages.
+Install pre-commit so checks run automatically on each commit.
+Verify the python version installed is 3.12 (not 3.13 or 3.14).
+Finally, activate your environment (operating system specific).
+uv venv
+uv python pin 3.12
+uv sync --extra dev --extra docs --upgrade
+uv run pre-commit install
+uv run python --version
+Windows (PowerShell):
 
-When working with Python, you need to see file extensions, e.g. fetcher.py and README.md, and you need to see files that your operating system may try to hide, e.g. `.git/`).
+.\.venv\Scripts\activate
+Step 2.6. Git add-commit-push
+Open a terminal in VS Code (PowerShell, zsh, or bash).
 
-On **Windows**:
+IMPORTANT: Replace the commit message with a clear and descriptive note about what you added or changed. Wrap the commit message in double quotes.
 
-- Open File Explorer -> View -> Show -> check "File name extensions" and "Hidden items".
+git add .
+git commit -m "Initialize from pro-analytics-02-starter (no local edits)"
+git push -u origin main
+We can then use git push for later commits.
 
-On **macOS**:
+NOTE: This will trigger the GitHub Actions workflow and publish your documentation via GitHub Pages. This should verify things worked as provided. If anything fails, let us know in the associated discussion.
 
-- Finder -> Settings -> Advanced -> check "Show all filename extensions".
-- To toggle display of hidden files: press Command+Shift+Period in Finder.
+Step 2.8. Git add-commit-push
+Open a terminal in VS Code (PowerShell, zsh, or bash).
 
-On **Linux**:
-
-- Files (Nautilus): press Ctrl+H to toggle hidden files.
-- Extensions are usually visible by default.
-
-## Step 1.3. (30 min) Install Tools
-
-### Install Git
-
-This is the first of a series of tools used by nearly all professional data analysts.
-You only have to install them once.
-
-Install **Git** from: <https://git-scm.com/>.
-
-### Install VS Code
-
-Install **VS Code** from <https://code.visualstudio.com/download>.
-
-⚠️ **Windows users:** During installation, check **Add to PATH** (macOS/Linux handle this automatically).
-If you forget, **re-install**.
-
-### Install uv
-
-Install `uv` Python virtual environment and dependency manager using the command below:
-
-On **macOS/Linux**, open a Terminal and paste the following command, then hit ENTER:
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-On **Windows**, open a PowerShell terminal and paste the following command, then hit ENTER:
-
-```powershell
-iwr -useb https://astral.sh/uv/install.ps1 | iex
-```
-
-**macOS only:** After installing, open Finder, go to your Python installation folder (e.g., `/Applications/Python 3.12/`), and double-click `Install Certificates.command` to finalize your setup. (You only need to do this once per Mac.)
-
-### Restart Terminal
-
-After installing all the tools, restart your terminal so `uv` is on the PATH.
-
-## Step 1.4. (5 min) Configure Git identity (use the same email as your GitHub account)
-
-Using your newly-re-opened terminal, edit these commands to use your name and email.
-Copy and paste the edited version into your terminal and hit ENTER after each to run them (one at a time) in your terminal:
-
-```bash
-git config --global user.name "Your Name"
-
-git config --global user.email "your_email_used_on_github@example.com"
-
-git config --global init.defaultBranch main
-```
-
-## Step 1.5. (5 min) Create a Folder to Hold All Your Repositories (One-Time)
-
-**Important:** Do _not_ store code inside **Documents**, **Desktop**, or any folder synced by OneDrive, Dropbox, or iCloud.
-
-In your terminal, type the following commands, one at a time, hitting ENTER after each:
-
-**Windows**
-
-```powershell
-cd C:\
-mkdir Repos
-cd Repos
-```
-
-**macOS / Linux**
-
-```bash
-cd ~
-mkdir Repos
-cd Repos
-```
-
-This creates a simple, permanent home for all your GitHub projects:
-
-- On Windows, use `C:\Repos`
-- On macOS/Linux, use `~/Repos`
-
-## Step 1.6. (5 min) Verify Machine Setup
-
-With your terminal open in your Repos folder, run the following commands, copy and paste them one at a time, hitting ENTER after each:
-
-```bash
-git --version
-uv --version
-code --version
-git config --global user.name
-git config --global user.email
-code .
-```
-
-If versions or git config commands do NOT work correctly, re-do the associated installation and configuration steps above.
-Work with an AI assistant (e.g. ChatGPT, Claude.ai, or other) to resolve any issues.
-
-If `code .` doesn’t work, re-run the installation and ensure that **Add to PATH** is checked during installation.
-
-When all of these are true, your setup is complete:
-
-- [ ] You can see hidden files and folders.
-- [ ] You can see file extensions.
-- [ ] All three version commands respond with version numbers.
-- [ ] Your Git configuration information is correct.
-- [ ] You can open VS Code with `code .`
-
-Congratulations — your professional analytics environment is ready to go!
-(Honestly, getting set up correctly IS the hardest part about using Python for analytics - time to take a break and celebrate!)
+git add .
+git commit -m "Personalize pyproject authors and mkdocs site settings"
+git push
