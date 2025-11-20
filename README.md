@@ -2,7 +2,7 @@
 > My personalized Submission: GitHub Repository with Jupyter Notebook and Peer Review.
 
 ## Project Overview
-In this project, I explore TODO
+In this project, I use the Kaggle Medical Costs Dataset to explore factors like age, lifestyle, and region to see which features have the biggest impact on charges. I’ll walk through data exploration, feature engineering, and modeling with both linear and polynomial regression. Then, I’ll compare model performance and visualize predictions in actual dollar amounts to connect the results to real world impact.
 
 [Click here for my notebook file](https://github.com/abeaderstadt/ml_regression_beaderstadt/blob/main/regression_beaderstadt.ipynb)<br>
 [Click here for my peer review file](https://github.com/abeaderstadt/ml_regression_beaderstadt/blob/main/peer_review.md)<br>
@@ -144,9 +144,6 @@ In this project, I explore TODO
 
 4. **Run the Notebook**  
    Execute cells sequentially to load data, prepare features, train models, and visualize results.
-
-5. **View Results**  
-   TODO
 
 ---
 
