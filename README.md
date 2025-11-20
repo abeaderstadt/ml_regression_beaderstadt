@@ -105,10 +105,10 @@ In this project, I explore TODO
 | Pipeline 2 | 0.8458   | 0.2156    | 0.3724     | 2,795.77 | 6,097.05 |
 
 ***Top features and model performance***
-- TODO INSTERT Chart HERE AND NOTE
+![Predicted vs Actual Medical Charges](figures/output_50_0.png)
 
 
-- - The polynomial pipeline (Pipeline 2) gave the best predictions, improving R² and reducing MAE/RMSE compared to the simple linear model.
+- The polynomial pipeline (Pipeline 2) gave the best predictions, improving R² and reducing MAE/RMSE compared to the simple linear model.
 
 - `smoking`, `age`, and `bmi`, (especially combined as `smoker_bmi`) were the strongest predictors of medical charges.
 
