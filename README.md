@@ -13,38 +13,49 @@ In this project, I explore TODO
 
 ## 1. Import and Inspect the Data
 - Loaded the [Medical Costs Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance) from Kaggle.
-- Inspected the dataset using `.info()`, `.head()`, `.describe()`, and `.isnull().sum()`.
+- Inspected the dataset using `.info()`, `.head()`.
 - Check for missing values and display summary statistics.
 
   - **Insights:**
-    - TODO instances and ? features.
-    - The target variable is TODO
+    - There were 1,338 instances and 7 features.
+    - The target variable is `charges`.
 
 ---
 
 ## 2. Data Exploration and Preparation
 
 ### 2.1 Explore data patterns and distributions
-- TODO
+- The features in this dataset are a mix of categorical and numeric.
+- Used histograms for the numberic, boxplots to check for outliers, and countplots to explore feature distributions.
+- Explored feature importance with a heatmap, boxplot, and scatter plot.
 
 ### 2.2 Handle missing values and clean data
-- TODO 
+- Transformed outliers for `charges` to reduce skew.
+- Converted the categorical features to numerical using one-hot encoding.
+- Then converted the boolean columns created by one-hot encoding to integers to prepare for scaling.
 
 ### 2.3 Feature selection and engineering
-- TODO
+- Created a new feature, `smoker_bmi`.
+- Scaled numeric predictors.
 
   - **Rationale:**
-    - TODO
+    - `smoker_bmi` to capture the combined effect of smoking and BMI.
+    - Scaled to prepare for future pipelines and modeling.
 
 ---
 
 ## 3. Feature Selection and Target Definition
 
 ### 3.1 Choose features and target
-- TODO
+**Input features:**
+- `age`, `bmi`, `children`, `sex_male`, `smoker_yes`, `region_northwest`, `region_southeast`, `region_southwest`, `smoker_bmi`
+
+**Target variable:**
+- `charges_log` (i'm modeling on the transformed target)
+
 
 **Reasoning:**  
-- These features were selected because TODO
+- These features were selected because they all relate directly to medical costs. The `smoker_bmi` interaction was added to see how smoking and BMI together affect charges.
 
 ### 3.2 Define X and y
 - Assign input features to X
@@ -59,45 +70,63 @@ In this project, I explore TODO
 
 ### 4.2 Train model using Scikit-Learn model.fit() method
   
-### 4.3 Evalulate performance for example:
-- Regression: R^2, MAE, RMSE (RMSE has been recently updated)
-- Clustering: Inertia, Silhouette Score
-- Key metrics: TODO
+### 4.3 Evalulate performance 
+- Key metrics: R^2, MAE, RMSE 
 
 ---
 
 ## Section 5. Improve the Model or Try Alternates (Implement Pipelines)
 
 ### 5.1 Implement Pipeline 1: Imputer → StandardScaler → Linear Regression.
-- TODO
+- This pipeline automates preprocessing and linear regression.
 
 ### 5.2 Implement Pipeline 2: Imputer → Polynomial Features (degree=3) → StandardScaler → Linear Regression.
-- TODO
+- This pipeline automates preprocessing and linear regression.
   
 ### 5.3 Compare performance of all models across the same performance metrics
-- TODO
+- This pipeline 2 takes things a step further by not just scaling and fitting, but also creating polynomial features so the model can capture nonlinear relationships and improve predictions.
 
 **Reasoning:**  
-- TODO  Which models performed better? How does scaling impact results?
+- Which models performed better?
+  - Pipeline 2 performed the best. R² improved on the log scale and MAE/RMSE dropped in dollars, so it’s capturing patterns that the simpler linear model missed.
+- How does scaling impact results?
+  - Scaling didn’t change much for Pipeline 1, but it’s important for consistency and for future models where feature magnitudes can really matter.
+  
 ---
 
 ## 6. Final Thoughts & Insights
 
 ### 6.1 Summarize findings.
 
-TODO ADD KEY CHART 
+| Model      | R² (log) | MAE (log) | RMSE (log) | MAE ($)  | RMSE ($) |
+| ---------- | -------- | --------- | ---------- | -------- | -------- |
+| Manual LR  | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
+| Pipeline 1 | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
+| Pipeline 2 | 0.8458   | 0.2156    | 0.3724     | 2,795.77 | 6,097.05 |
 
 ***Top features and model performance***
-- TODO INSTERT TABLE HERE AND NOTE
+- TODO INSTERT Chart HERE AND NOTE
 
 
-- TODO LIST KEY FINDINGS & CONCLUSIONS HERE
+- - The polynomial pipeline (Pipeline 2) gave the best predictions, improving R² and reducing MAE/RMSE compared to the simple linear model.
+
+- `smoking`, `age`, and `bmi`, (especially combined as `smoker_bmi`) were the strongest predictors of medical charges.
+
+- Transforming the target with a log scale helped stabilize variance and improved the model fit.
+
+- The scatter plots above show predicted vs actual charges (in dollars) for Pipeline 1 and Pipeline 2, highlighting how well each model performs overall and where extreme costs are harder to predict.
 
 ### 6.2 Discuss challenges faced.
-- TODO
+- Handling skewed target values required a log transformation to get meaningful regression results.
+
+- Adding polynomial features improved performance but made the model harder to explain.
+
+- Making sure metrics were consistent across log scale vs. dollar scale took a lot of trial and error.
 
 ### 6.3 Future work
-- TODO 
+- Explore interaction terms beyond smoker_BMI, or try regularization like Ridge/Lasso to see if it improves generalization.
+
+- Experiment with Random Forests to see how they capture nonlinear patterns.
 
 ---
 
