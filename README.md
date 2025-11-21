@@ -26,7 +26,7 @@ In this project, I use the Kaggle Medical Costs Dataset to explore factors like 
 
 ### 2.1 Explore data patterns and distributions
 - The features in this dataset are a mix of categorical and numeric.
-- Used histograms for the numberic, boxplots to check for outliers, and countplots to explore feature distributions.
+- Used histograms for the numeric, boxplots to check for outliers, and countplots to explore feature distributions.
 - Explored feature importance with a heatmap, boxplot, and scatter plot.
 
 ### 2.2 Handle missing values and clean data
@@ -70,7 +70,7 @@ In this project, I use the Kaggle Medical Costs Dataset to explore factors like 
 
 ### 4.2 Train model using Scikit-Learn model.fit() method
   
-### 4.3 Evalulate performance 
+### 4.3 Evaluate performance 
 - Key metrics: R^2, MAE, RMSE 
 
 ---
@@ -124,7 +124,7 @@ In this project, I use the Kaggle Medical Costs Dataset to explore factors like 
 - Making sure metrics were consistent across log scale vs. dollar scale took a lot of trial and error.
 
 ### 6.3 Future work
-- Explore interaction terms beyond smoker_BMI, or try regularization like Ridge/Lasso to see if it improves generalization.
+- Explore interaction terms beyond smoker_bmi, or try regularization like Ridge/Lasso to see if it improves generalization.
 
 - Experiment with Random Forests to see how they capture nonlinear patterns.
 
