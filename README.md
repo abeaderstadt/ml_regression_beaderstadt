@@ -98,11 +98,12 @@ In this project, I use the Kaggle Medical Costs Dataset to explore factors like 
 
 ### 6.1 Summarize findings.
 
-| Model      | R² (log) | MAE (log) | RMSE (log) | MAE ($)  | RMSE ($) |
-| ---------- | -------- | --------- | ---------- | -------- | -------- |
-| Manual LR  | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
-| Pipeline 1 | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
-| Pipeline 2 | 0.8458   | 0.2156    | 0.3724     | 2,795.77 | 6,097.05 |
+| Model                      | R² (log) | MAE (log) | RMSE (log) | MAE ($)  | RMSE ($) |
+| -------------------------- | -------- | --------- | ---------- | -------- | -------- |
+| Baseline Linear Regression | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
+| Pipeline 1                 | 0.8170   | 0.2540    | 0.4057     | 3,974.99 | 8,561.67 |
+| Pipeline 2                 | 0.8458   | 0.2156    | 0.3724     | 2,795.77 | 6,097.05 |
+
 
 ***Top features and model performance***
 ![Predicted vs Actual Medical Charges](figures/output_50_0.png)
