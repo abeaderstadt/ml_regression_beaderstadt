@@ -12,7 +12,7 @@ The features chosen were: `age`, `bmi`, and `smoker_num`. The features make a lo
 *Improvement Suggestion:* It might be nice to briefly mention why other features (sex, region, children) weren’t included. This could really help show the reader why the features chosen were best.
 
 ## 3. Model Performance & Comparisons (Are the results and comparisons clearly explained?)
-The comparison between linear regression and polynomial regression (degree=3) is clear. Sabriya reported R², MAE, and RMSE, and she explains that the polynomial model does better because it captures nonlinear relationships. Her notes on scaling really helped me as a reader as I read through the modeling process.
+The comparison between linear regression and polynomial regression (degree=3) is clear. Sabriya reported R², MAE, and RMSE, and she explains that the polynomial model does better because it captures nonlinear relationships. Also her notes on scaling really helped me as I read through the modeling process.
 
 | Model                 | R²     | MAE     | RMSE    |
 | --------------------- | ------ | ------- | ------- |
@@ -22,4 +22,4 @@ The comparison between linear regression and polynomial regression (degree=3) is
 *Improvement Suggestion:* Adding some visualization here of predicted vs actual charges for both models would make the improvement easier to “see” visually.
 
 ## 4. Reflection Quality (Are insights well thought out?)
-Her reflections are solid. She talks about challenges like skewed target values and encoding, and she gives good ideas for next steps. Overall her notebook shows that she understands regression workflows. Great job Sabriya! 
+Her reflections are solid. She talks about challenges like skewed target values and encoding, and she gives good ideas for her next steps. Overall her notebook definitely shows that she understands regression workflows. Great job Sabriya! 
