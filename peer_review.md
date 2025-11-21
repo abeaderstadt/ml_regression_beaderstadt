@@ -9,7 +9,7 @@ Sabriya’s notebook is very well organized and easy to follow. She starts with 
 ## 2. Feature Selection & Justification (Do the chosen features make sense given the objectives?)
 The features chosen were: `age`, `bmi`, and `smoker_num`. The features make a lot of sense. Age and bmi are pretty well known to be health indicators. The smoker status really jumps out in the visualizations because it showed the largest difference in medical costs. 
 
-*Improvement Suggestion:* It might be nice to briefly mention why other features (sex, region, children) weren’t included. This could really help show the reader why the selection was made.
+*Improvement Suggestion:* It might be nice to briefly mention why other features (sex, region, children) weren’t included. This could really help show the reader why the features chosen were best.
 
 ## 3. Model Performance & Comparisons (Are the results and comparisons clearly explained?)
 The comparison between linear regression and polynomial regression (degree=3) is clear. Sabriya reported R², MAE, and RMSE, and she explains that the polynomial model does better because it captures nonlinear relationships. Her notes on scaling really helped me as a reader as I read through the modeling process.
